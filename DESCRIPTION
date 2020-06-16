@@ -1,0 +1,25 @@
+Package: mzcharge
+Type: Package
+Title: Centroiding and charge assignment for high-resolution profile LC-MS spectra
+Version: 0.1.0
+Authors@R: c(person("Nikita","Vasilyev", role = c("aut","cre"),
+                    email = "nktvslv@gmail.com"))
+Author: Nikita Vasilyev [aut, cre]
+Maintainer: Nikita Vasilyev <nktvslv@gmail.com>
+Description: Deconvolution of high-resolution MS1 spectra of peptides via
+             centroiding and charge assignment.
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.0
+Depends: R (>= 3.6.0)
+LinkingTo: 
+    Rcpp (>= 1.0.0),
+    RcppArmadillo (>= 0.9.850.1.0)
+Imports: 
+    Rcpp (>= 1.0.0),
+    mzR (>= 2.20.0),
+    future (>= 1.17.0),
+    future.apply(>= 1.5.0),
+    data.table (>= 1.12.0)
+    
