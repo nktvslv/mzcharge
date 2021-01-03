@@ -32,7 +32,8 @@ charge_spectrafile <- function(filename, min_width, min_intensity,
     ms1spectra <- mzR::spectra(mzml, ms1headers[["acquisitionNum"]])
     mzR::close(mzml)
 
-    plan(multisession)
+    plan(multisession, workers = ifelse(parallel::detectCores() == 1L, 1L,
+                                        parallel::detectCores() - 1L))
 
     out <- future_lapply(X = ms1spectra, FUN = charge_singlespec,
                          min_width, min_intensity, mz_tol, intensity_tol, max_charge, num_iso)
