@@ -1,8 +1,7 @@
 # mzcharge
-## Deconvolution of high-resolution MS1 spectra
-`mzcharge` is an R package for centroiding and charge assignment for peaks in
-high-resolution mass spectra of peptides. It is intended to be used for
-label-free quantitation of peptides analyzed by LC-MS.
+## Deconvolution of high-resolution mass spectra
+`mzcharge` is an R package for deconvolution, centroiding and charge assignment,
+of high-resolution mass spectra. Intended for label-free quantitation of peptides analyzed by LC-MS.
 
 ## Installation
 
@@ -27,11 +26,8 @@ devtools::install_github("https://github.com/nktvslv/mzcharge.git")
 ```
 
 ## Package functionality
-`mzcharge` has five functions:
-
-`charge_singlespec` is the major function that takes a single spectrum (numeric
-vector of mz values followed by intensity values, an output of `spectra`
-function from [mzR](https://github.com/sneumann/mzR/) package) and returns a
+`charge_singlespec` takes a single spectrum (numeric vector of mz values
+followed by intensity values, an output of `spectra` function from [mzR](https://github.com/sneumann/mzR/) package) and returns a
 data.frame where each row represents a centroid with corresponding mz, 
 intensity, charge, isotopic position, index of isotopic pattern and count of 
 peaks in pattern. This function can be used interactively for tweaking processing
