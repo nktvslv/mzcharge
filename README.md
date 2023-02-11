@@ -36,8 +36,9 @@ parameters (peak width, mz tolerance, averagine correlation).
 `charge_spectrafile` runs `charge_singlespec` on every MS1 spectrum from
 raw file in mzML format. It uses [mzR](https://github.com/sneumann/mzR/) to read 
 mzML and [future.apply](https://cran.r-project.org/package=future.apply) for 
-parallel processing. See [ProteoWizard](http://proteowizard.sourceforge.net)
-for mass spectrometry raw data format conversion.
+parallel processing. See [ProteoWizard](http://proteowizard.sourceforge.net) and/or
+[ThermoRawFileParser](http://compomics.github.io/projects/ThermoRawFileParser) for
+mass spectrometry raw data format conversion.
 
 `charge_corr` corrects charges for monoisotopic peaks by comparing centroids
 from neighboring spectra. Takes data.frame output from `charge_spectrafile`
